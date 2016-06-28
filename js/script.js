@@ -11,8 +11,8 @@ var squares = document.querySelectorAll('.square')
   for (var i=0; i<9; i++) {
     squares[i].addEventListener('click', function (e) {
       // loop through squares again and check which node was clicked
-      for (var j=0; j < 9; j++) {
-        if (squares[j] === e.target) {
+      for (var j=0; j < 9; j++) { //check if board is empty
+        if (squares[j] === e.target && board[j] === '' {
             board[j] = turn
             drawboard()
             switchTurn()
