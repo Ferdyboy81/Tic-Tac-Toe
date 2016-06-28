@@ -18,8 +18,17 @@ var squares = document.querySelectorAll('.square')
       }
     })
 }
+// set up click listener for Reset button
+document.getElementById('rest').addEventListener('click', function (e) {
+  for (var i = 0; i < 9; i++){
+    board[i] = ''
+  }
+    drawboard()
+}
+
+
       // loop through squares again and check which node was clicked
-      for (var j=0; j < 9; j++) { //check if board is empty
+    // for (var j=0; j < 9; j++) { //check if board is empty
   //       if (squares[j] === e.target && board[j] === '') {
   //           board[j] = turn
   //           drawboard()
@@ -51,6 +60,11 @@ function switchTurn() {
   else
     turn = 'X'
 }
+
+
+
+
+
 
 function checkWin () {
   var winCombos = [
